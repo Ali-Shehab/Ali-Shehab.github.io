@@ -1,0 +1,146 @@
+body {
+    background-color: #292A2D;
+    color: #A9A9B3;
+    letter-spacing: 1.5px;
+}
+
+nav {
+    background-color: #252627;
+    padding: 20px;
+}
+
+#pageIn,
+#page {
+    background: none;
+    border: none;
+    outline: none;
+    color: #A9A9B3;
+    caret-color: #A9A9B3;
+    font-weight: bolder;
+    font-size: 1.125rem;
+    letter-spacing: 1.5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 55%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-display: auto;
+    font-family: monospace, monospace
+}
+
+.logo img {
+    height: 44px
+}
+
+.logo__mark {
+    margin-right: 5px
+}
+
+.logo__text {
+    font-size: 1.125rem
+}
+
+.logo__cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1rem;
+    background: #158c1d;
+    margin-left: 5px;
+    border-radius: 1px;
+    animation: cursor 1s infinite
+}
+
+.pp {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin: 50px auto;
+}
+
+.name {
+    font-weight: bolder;
+    font-size: 2.8rem;
+    margin-bottom: 35px;
+}
+
+.sm-link {
+    font-size: 1.6rem;
+    color: #A9A9B3;
+    margin: 0 7px;
+}
+
+.sm-link:hover {
+    color: #158c1d;
+}
+
+label {
+    margin: 0;
+    width: 150px;
+    text-align: left;
+}
+
+#contact div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    max-width: 400px;
+}
+
+#submit {
+    margin-right: 162px;
+    background-color: #A9A9B3;
+    color: black;
+    border-color: #A9A9B3;
+    letter-spacing: 1.5px;
+}
+
+#submit:hover {
+    background-color: #a9a9b373;
+    color: white;
+    border-color: #a9a9b373;
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .logo__cursor {
+        animation: none
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
