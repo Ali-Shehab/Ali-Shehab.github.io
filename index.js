@@ -27,12 +27,12 @@ $("#contact").submit(async e => {
         data: { email: email, message: message },
         statusCode: {
             400: () => {
-                alert("NO Ok");
+                $("#res").html("<b class='text-danger'>An error occured, Please try again !</b>");
                 $("#submit b").html("Submit");
                 $("#submit").attr("disabled", false);
             },
             200: () => {
-                alert("ok");
+                $("#res").html("<b style='color:white'>Thank you for contacting me !</b>");
                 $("#email").val("");
                 $("#message").val("");
                 $("#submit b").html("Submit");
