@@ -9,6 +9,14 @@ nav {
     padding: 20px;
 }
 
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
 #pageIn,
 #page {
     background: none;
@@ -107,7 +115,7 @@ label {
 
 #submit {
     margin-right: 162px;
-    background-color: #A9A9B3;
+    background-color: #f8f8f8;
     color: black;
     border-color: #A9A9B3;
     letter-spacing: 1.5px;
@@ -117,6 +125,16 @@ label {
     background-color: #a9a9b373;
     color: white;
     border-color: #a9a9b373;
+}
+
+.post_link {
+    color: #a9a9b3;
+    text-decoration: none;
+}
+
+.post_link:hover {
+    color: #d2cfcf;
+    font-style: italic;
 }
 
 @media(prefers-reduced-motion:reduce) {
