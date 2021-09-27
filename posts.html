@@ -64,7 +64,7 @@
             posts.forEach(post => {
                 posts_html += `
                     <h2><a href='http://127.0.0.1:5500/potfolio_shhab/post.html?id=${post?._id}' 
-                        class='post_link'>${post.title}</a></h2>
+                        id='post_link'>${post.title}</a></h2>
                     <p>${post?.body?.substring(0,200)} ...</p>
                 `;
                 posts_html += '<hr/>';
