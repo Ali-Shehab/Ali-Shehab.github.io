@@ -30,7 +30,8 @@
         </div>
     </nav>
     <div class="container">
-        <div id="post" style="text-align: left;" class="mt-4">
+        <h1>Posts</h1>
+        <div id="posts" style="text-align: left;" class="mt-4">
             <span class="text-center">Loading ...</span>
         </div>
     </div>
@@ -43,38 +44,34 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./index.js"></script>
-    <script src="./markdown-to-html.js"></script>
     <script>
-        let html = "";
+        let posts, posts_html = "";
 
         $(document).ready(async () => {
-            const urlSearchParams = new URLSearchParams(window.location.search);
-            const {
-                id
-            } = Object.fromEntries(urlSearchParams.entries());
-
             await $.ajax({
                 type: "GET",
-                url: `https://contact-ali-shehab.herokuapp.com/posts/${id}`,
+                url: "https://contact-ali-shehab.herokuapp.com/posts",
                 statusCode: {
-                    404: () => {
-                        html = "<h1>Post not found!</h1>";
-                        $("#post").html(html);
-                    },
                     200: data => {
-                        html += `
-                        <div style='text-align: left;'>
-                            <h1>${data?.title}</h1>
-                            <small>${data?.date?.substring(0, 10)?.split('-')?.reverse()?.join(' / ')}</small>
-                            <hr />
-                            <p style='font-size:1.1rem;'>${data.body}</p>
-                        </div>
-                        `;
-                        $("#post").html(MarkdownToHtml.parse(html));
+                        posts = data;
+                        addPosts(posts);
                     }
                 }
             });
         });
+
+        const addPosts = posts => {
+            posts.forEach(post => {
+                posts_html += `
+                    <h2><a href='http://127.0.0.1:5500/potfolio_shhab/post.html?id=${post?._id}' 
+                        class='post_link'>${post.title}</a></h2>
+                    <p>${post?.body?.substring(0,200)} ...</p>
+                `;
+                posts_html += '<hr/>';
+            });
+
+            $('#posts').html(posts_html);
+        };
     </script>
 </body>
 
