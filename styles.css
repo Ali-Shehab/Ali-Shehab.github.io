@@ -127,12 +127,12 @@ label {
     border-color: #a9a9b373;
 }
 
-.post_link {
+#post_link {
     color: #a9a9b3;
     text-decoration: none;
 }
 
-.post_link:hover {
+#post_link:hover {
     color: #d2cfcf;
     font-style: italic;
 }
