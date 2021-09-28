@@ -66,6 +66,9 @@
                     <h2><a href='https://aez121.github.io/post.html?id=${post?._id}' 
                         id='post_link'>${post.title}</a></h2>
                     <p>${post?.body?.substring(0,200)} ...</p>
+                    <div style='text-align: right;'>
+                        <small>${post?.date?.substring(0, 10)?.split('-')?.reverse()?.join(' / ')}</small>
+                    </div>
                 `;
                 posts_html += '<hr/>';
             });
