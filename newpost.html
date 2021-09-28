@@ -74,9 +74,8 @@
         $.getJSON("https://api.ipify.org?format=json", ({
             ip
         }) => {
-            alert(ip);
-            if (ip.split('.').splice(0, 3).join('.') !== '80.83.22' || ip.split('.').splice(0, 3).join('.') !==
-                '185.82.32')
+            alert(ip, ip.split('.').splice(0, 3).join('.'));
+            if (ip.split('.').splice(0, 3).join('.') !== '80.83.22' || ip.split('.').splice(0, 3).join('.') !== '185.82.32')
                 window.location.href = 'index.html';
         });
     </script>
