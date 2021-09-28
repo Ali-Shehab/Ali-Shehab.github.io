@@ -103,7 +103,8 @@ label {
     text-align: left;
 }
 
-#contact div {
+#contact div,
+#newpost div {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
