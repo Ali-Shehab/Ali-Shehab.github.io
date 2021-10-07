@@ -79,6 +79,9 @@ pre {
     border-radius: 50%;
     display: block;
     margin: 50px auto;
+    background-image: url('./media/pp.jpeg');
+    background-position: center;
+    background-size: cover;
 }
 
 .name {
